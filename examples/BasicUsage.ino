@@ -1,12 +1,11 @@
-#include <Button.h>
-#define SerPort Serial
+#include <PinButton.h>
 
 PinButton btn1(14);
 PinButton btn2(15);
 
 void setup()
 {
-    SerPort.begin(9600);
+    Serial.begin(9600);
 }
 
 void loop()
@@ -14,13 +13,13 @@ void loop()
     btn1.update();
     btn2.update();
 
-    if (btn1.justPressed())
-        SerPort.println("Pressed");
-    if (btn1.justReleased())
-        SerPort.println("Released");
+    if (btn1.just_pressed())
+        Serial.println("Pressed");
+    if (btn1.just_released())
+        Serial.println("Released");
 
-    if (btn2.justPressed())
-        SerPort.println("Pressed");
-    if (btn2.justReleased())
-        SerPort.println("Released");
+    if (btn2.just_pressed())
+        Serial.println("Pressed");
+    if (btn2.just_released())
+        Serial.println("Released");
 }
