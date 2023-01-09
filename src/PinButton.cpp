@@ -1,12 +1,10 @@
 #include "PinButton.h"
 
-#include <Arduino.h>
-
-PinButton::PinButton(int pin, bool invert)
+PinButton::PinButton(int pin, int mode, bool invert)
     : VirtualButton(invert)
     , pin_(pin)
 {
-    pinMode(pin, OUTPUT);
+    pinMode(pin, mode);
 }
 
 bool PinButton::read()
