@@ -1,5 +1,7 @@
 # Arduino-Button
 
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/tfeldmann/library/Button.svg)](https://registry.platformio.org/libraries/tfeldmann/Button)
+
 ## API
 
 ```cpp
