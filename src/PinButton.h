@@ -10,5 +10,5 @@ public:
 private:
     int pin_;
 
-    bool read() override;
+    bool read(void) override;
 };

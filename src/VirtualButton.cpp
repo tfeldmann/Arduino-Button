@@ -8,7 +8,7 @@ VirtualButton::VirtualButton(bool invert)
 {
 }
 
-struct ButtonEvents VirtualButton::update()
+struct ButtonEvents VirtualButton::update(void)
 {
     bool reading = read();
     return update(reading);
@@ -36,12 +36,12 @@ struct ButtonEvents VirtualButton::update(bool reading)
     return result;
 }
 
-bool VirtualButton::is_pressed()
+bool VirtualButton::is_pressed(void)
 {
     return state_;
 }
 
-bool VirtualButton::just_pressed()
+bool VirtualButton::just_pressed(void)
 {
     if (flag_pressed_) {
         flag_pressed_ = false;
@@ -50,7 +50,7 @@ bool VirtualButton::just_pressed()
     return false;
 }
 
-bool VirtualButton::just_released()
+bool VirtualButton::just_released(void)
 {
     if (flag_released_) {
         flag_released_ = false;
@@ -59,12 +59,12 @@ bool VirtualButton::just_released()
     return false;
 }
 
-bool VirtualButton::just_changed()
+bool VirtualButton::just_changed(void)
 {
     return (just_pressed() || just_released());
 }
 
-bool VirtualButton::read()
+bool VirtualButton::read(void)
 {
     return state_ ^ invert_;
 }

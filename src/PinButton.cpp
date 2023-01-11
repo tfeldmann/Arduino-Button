@@ -7,7 +7,7 @@ PinButton::PinButton(int pin, int mode, bool invert)
     pinMode(pin, mode);
 }
 
-bool PinButton::read()
+bool PinButton::read(void)
 {
     return digitalRead(pin_);
 }
