@@ -1,11 +1,12 @@
 #pragma once
-#include "VirtualButton.h"
-
 #include <Arduino.h>
 
-class PinButton : public VirtualButton {
+#include "VirtualButton.h"
+
+class PinButton : public VirtualButton
+{
 public:
-    PinButton(int pin, int mode = INPUT_PULLUP, bool invert = false);
+    PinButton(int pin, bool invert = false, int mode = INPUT_PULLUP);
 
 private:
     int pin_;

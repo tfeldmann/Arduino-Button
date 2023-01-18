@@ -1,12 +1,14 @@
 #pragma once
 
-struct ButtonEvents {
+struct ButtonEvents
+{
     bool pressed;
     bool released;
     bool changed;
 };
 
-class VirtualButton {
+class VirtualButton
+{
 public:
     VirtualButton(bool invert = false);
     virtual struct ButtonEvents update(void);

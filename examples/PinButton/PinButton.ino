@@ -1,6 +1,6 @@
 #include <PinButton.h>
 
-PinButton btn(12, INPUT_PULLUP);
+PinButton btn(12, false, INPUT_PULLUP);
 bool led_state = LOW;
 
 void setup()

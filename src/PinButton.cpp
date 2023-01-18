@@ -1,6 +1,6 @@
 #include "PinButton.h"
 
-PinButton::PinButton(int pin, int mode, bool invert)
+PinButton::PinButton(int pin, bool invert, int mode)
     : VirtualButton(invert)
     , pin_(pin)
 {
