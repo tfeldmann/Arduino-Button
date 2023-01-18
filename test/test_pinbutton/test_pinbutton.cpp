@@ -1,6 +1,7 @@
-#include "PinButton.h"
 #include <ArduinoFake.h>
 #include <unity.h>
+
+#include "PinButton.h"
 using namespace fakeit;
 
 void setUp(void)
@@ -12,7 +13,7 @@ void setUp(void)
 void test_pinbutton()
 {
     // create a button at rest
-    PinButton btn(10, INPUT);
+    PinButton btn(10, false, INPUT);
     Verify(Method(ArduinoFake(), pinMode).Using(10, INPUT));
 
     When(Method(ArduinoFake(), digitalRead)).AlwaysReturn(LOW);
